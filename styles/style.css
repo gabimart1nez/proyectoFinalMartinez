@@ -1,0 +1,133 @@
+/* GENERICOS */
+.display-none {
+    display: none;
+}
+
+/* PORTADA */
+#front {
+    z-index: 4;
+    background-image: url(../images/front.jpg);
+    background-size: cover;
+}
+
+.cover-container {
+    background: rgba(28, 28, 28, 0.7);
+}
+
+/* LOG IN */
+#log-in-container {
+    z-index: 5;
+    background: rgba(28, 28, 28, 0.9);
+    overflow-y: scroll;
+}
+
+/* SETTINGS */
+#settings-container {
+    z-index: 6;
+    background: rgba(28, 28, 28, 0.9);
+    overflow-y: scroll;
+}
+
+/* MENU - PEDIDO */
+#nav-bar {
+    z-index: 1;
+}
+#order-container {
+    z-index: 1;
+    background: rgba(28, 28, 28, 0.9);
+    overflow-y: scroll;
+}
+
+#show-order-btn {
+    z-index: 2;
+    position: fixed;
+    bottom: 1rem;
+    right: 1rem;
+}
+
+#counter {
+    z-index: 3;
+    position: fixed;
+    bottom: 1.5rem;
+    right: 1.5rem;
+}
+
+#send-order-btn {
+    position: fixed;
+    bottom: 1rem;
+    left: 1rem; 
+}
+
+#alert {
+    z-index: 3;
+    position: fixed;
+    bottom: 3rem;
+    right: 1rem;
+    animation: alert-out 0.7s 0.7s ease forwards;
+}
+
+.eliminar, #home-btn {
+    cursor: pointer;
+}
+
+@keyframes alert-out {
+    100% {
+        opacity: 0;
+        transform: translateY(90%) translateX(45%) scale(0);
+    }
+}
+
+.to-up {
+    animation: to-up 1s ease;
+    animation-fill-mode: forwards;
+}
+@keyframes to-up {
+    100% {
+        transform: translateY(-100%);
+    }
+}
+
+.from-up {
+    animation: from-up 1s ease;
+    animation-fill-mode: forwards;
+}
+@keyframes from-up {
+    0% {
+        transform: translateY(-100%);
+    }
+    100% {
+        transform: translateY(0%);
+    }
+}
+
+.card:hover {
+    animation: card-scale 1s ease;
+    animation-fill-mode: forwards;
+}
+@keyframes card-scale {
+    100% {
+        transform: scale(1.05);
+    }
+}
+
+.out-item {
+    animation: out-item 1s 0s ease;
+    animation-fill-mode: forwards;
+}
+@keyframes out-item {
+    100% {
+        opacity: 0;
+        transform: translatex(-100%);
+    }
+}
+
+.send-item {
+    animation: send-item 1s 0s ease;
+    animation-fill-mode: forwards;
+}
+@keyframes send-item {
+    100% {
+        opacity: 0;
+        transform: translatex(100%);
+    }
+}
